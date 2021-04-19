@@ -1,0 +1,11 @@
+@import "../../sassStyles/mixins";
+
+.footer {
+  @include container;
+  @include bar;
+}
+
+.footer-sidenote {
+  font-family: "Lato-Bold", sans-serif;
+  letter-spacing: 0.137rem;
+}
