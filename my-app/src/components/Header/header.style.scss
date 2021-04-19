@@ -1,0 +1,32 @@
+@import "../../sassStyles/variables";
+@import "../../sassStyles/mixins";
+
+.header {
+  @include container;
+  @include bar;
+  justify-content: space-between;
+}
+
+.header-bag {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.header-bag__item {
+  height: 2.5rem;
+  display: flex;
+  align-items: flex-end;
+  & icon {
+    height: auto;
+    fill: $textColor;
+  }
+}
+
+.header-bag__count {
+  margin-left: 1rem;
+}
+
+.header-bag__wishlist-count {
+  margin-left: 1rem;
+}

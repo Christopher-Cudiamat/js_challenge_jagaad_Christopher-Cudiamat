@@ -44,3 +44,19 @@
     @content;
   }
 }
+
+@mixin container {
+  width: 100%;
+  max-width: 1240px;
+  padding: 0 4rem;
+  margin: 0 auto;
+}
+
+@mixin bar {
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: $whiteColor;
+}
