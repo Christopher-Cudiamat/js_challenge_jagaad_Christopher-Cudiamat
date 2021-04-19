@@ -1,0 +1,9 @@
+@import "./sassStyles/variables";
+.App {
+  background: $warningColor;
+}
+
+.Text {
+  color: $whiteColor;
+  font-size: 10rem;
+}
