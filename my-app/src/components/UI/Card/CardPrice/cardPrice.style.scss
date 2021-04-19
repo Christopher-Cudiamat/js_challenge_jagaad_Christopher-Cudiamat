@@ -1,0 +1,15 @@
+.product__price {
+  padding-bottom: 20px;
+  font-family: "Lato-Bold", sans-serif;
+  font-size: 14px;
+  letter-spacing: 2.33px;
+}
+
+.product__price--discounted {
+  color: #f54b5e;
+}
+
+.product__price--strike {
+  margin-right: 10px;
+  text-decoration: line-through;
+}
