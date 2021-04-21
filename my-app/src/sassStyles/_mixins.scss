@@ -2,7 +2,7 @@
 
 @import "./variables";
 
-// Breakpoints
+// Breakpoints mixins
 @mixin smMinBreakPoint {
   @media (min-width: #{$screen-sm}) {
     @content;
@@ -45,6 +45,8 @@
   }
 }
 
+// UI general mixins
+
 @mixin container {
   width: 100%;
   max-width: 1240px;
@@ -59,4 +61,22 @@
   align-items: center;
   text-transform: uppercase;
   background-color: $whiteColor;
+}
+
+//UI buttons mixins
+@mixin button--primary {
+  padding: 1.3rem;
+  font-family: "Lato-Bold", sans-serif;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.139rem;
+}
+
+@mixin button {
+  border: 0.1rem solid $greyColor;
+  border-radius: 10rem;
+  background-color: $whiteColor;
+  cursor: pointer;
+  transition: 0.3s border, 0.3s color, 0.3s background-color;
+  appearance: none;
 }
