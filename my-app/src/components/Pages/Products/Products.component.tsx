@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Card from "../../UI/Card/Card.component";
 import CardDescription from "../../UI/Card/CardDescription/CardDescription.component";
 import CardDetails from "../../UI/Card/CardDetails/CardDetails.component";
@@ -10,6 +10,7 @@ import "./products.style.scss";
 import AddToCartButton from "../../UI/Buttons/AddToCartButton/AddToCartButton.component";
 import WishlistButton from "../../UI/Buttons/WishlistButton/WishlistButton.component";
 import Pagination from "../../Pagination/Pagination.component";
+import CartListModal from "../../CartList/CartListModal.component";
 
 const Products: React.FC = () => {
   const [products, setProducts] = useState([]);
@@ -24,7 +25,7 @@ const Products: React.FC = () => {
   }, [offset]);
 
   return (
-    <div>
+    <Fragment>
       <div className="container">
         <ul className="product-list">
           {products?.map((el: any) => (
@@ -51,7 +52,9 @@ const Products: React.FC = () => {
           ItemPerPage={itemPerPage}
         />
       </div>
-    </div>
+
+      <CartListModal />
+    </Fragment>
   );
 };
 

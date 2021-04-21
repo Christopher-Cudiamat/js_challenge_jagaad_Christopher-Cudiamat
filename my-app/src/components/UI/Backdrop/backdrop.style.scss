@@ -1,0 +1,14 @@
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.backdrop__dark {
+  background: rgba(0, 0, 0, 0.3);
+}
+.backdrop__light {
+  background: rgba(250, 250, 250, 0.3);
+}
