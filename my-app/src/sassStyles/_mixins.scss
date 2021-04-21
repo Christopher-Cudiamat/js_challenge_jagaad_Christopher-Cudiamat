@@ -80,3 +80,8 @@
   transition: 0.3s border, 0.3s color, 0.3s background-color;
   appearance: none;
 }
+
+@mixin button--round {
+  display: block;
+  border-radius: 50%;
+}

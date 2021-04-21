@@ -8,6 +8,8 @@ import CardTitle from "../../UI/Card/CardTitle/CardTitle.component";
 import { getProducts } from "../../../services/productsController";
 import "./products.style.scss";
 import AddToCartButton from "../../UI/Buttons/AddToCartButton/AddToCartButton.component";
+import WishlistButton from "../../UI/Buttons/WishlistButton/WishlistButton.component";
+
 const Products: React.FC = () => {
   const [products, setProducts] = useState([]);
 
@@ -20,9 +22,11 @@ const Products: React.FC = () => {
     <div>
       <div className="container">
         <ul className="product-list">
-          {products!.map((el: any) => (
+          {products?.map((el: any) => (
             <Card key={el.uuid}>
-              <CardMedia image={el.cover_image_url} />
+              <CardMedia image={el.cover_image_url}>
+                <WishlistButton isDisabled={true} />
+              </CardMedia>
               <CardDetails>
                 <CardTitle>{el.title}</CardTitle>
                 <CardDescription>{el.description}</CardDescription>

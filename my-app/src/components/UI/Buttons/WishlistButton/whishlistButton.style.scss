@@ -1,0 +1,35 @@
+@import "../../../../sassStyles/mixins";
+@import "../../../../sassStyles/variables";
+
+.product__wishlist-button {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  @include button;
+  @include button--round;
+  background: $whiteColor;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: $greyColor;
+  transition: 0.3s fill;
+}
+
+.wishlist__button--disabled {
+  opacity: 0.3;
+}
+
+.button--wishlist:hover {
+  border: 1px solid $textColor;
+}
+
+.button--wishlist:hover > .icon {
+  fill: $textColor;
+}

@@ -23,13 +23,6 @@
     "import/prefer-default-export": "off",
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": ["error"],
-    //Note: By enabling this rule, it will generate some ESLint errors that will be fixed by adding explicitly the return type of the functions on your code.
-    "@typescript-eslint/explicit-function-return-type": [
-      "error",
-      {
-        "allowExpressions": true
-      }
-    ],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn"
   }
