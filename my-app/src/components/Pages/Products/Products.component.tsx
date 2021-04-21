@@ -14,6 +14,8 @@ import Pagination from "../../Pagination/Pagination.component";
 const Products: React.FC = () => {
   const [products, setProducts] = useState([]);
   const [offset, setOffset] = useState(0);
+  const totalProductsLegth = 71;
+  const itemPerPage = 6;
 
   useEffect(() => {
     getProducts(offset).then((res: any) => {
@@ -21,8 +23,6 @@ const Products: React.FC = () => {
     });
   }, [offset]);
 
-  const totalProductsLegth = 71;
-  const itemPerPage = 6;
   return (
     <div>
       <div className="container">
@@ -30,7 +30,7 @@ const Products: React.FC = () => {
           {products?.map((el: any) => (
             <Card key={el.uuid}>
               <CardMedia image={el.cover_image_url}>
-                <WishlistButton isDisabled={true} />
+                <WishlistButton data={el} />
               </CardMedia>
               <CardDetails>
                 <CardTitle>{el.title}</CardTitle>

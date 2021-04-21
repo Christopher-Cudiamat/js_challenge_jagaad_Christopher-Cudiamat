@@ -1,9 +1,9 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { addProducts } from "../../../../store/bag/bag.action";
-
 import "./addToCartButton.style.scss";
 import { IAddToCartButtonProps } from "./addToCartButton.type";
+
 const AddToCartButton: React.FC<IAddToCartButtonProps> = ({
   isInCart,
   data,

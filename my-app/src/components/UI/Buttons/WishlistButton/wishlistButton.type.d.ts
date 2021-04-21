@@ -1,3 +1,3 @@
 export interface IWishlistButtonProps {
-  isDisabled: boolean;
+  data: any;
 }

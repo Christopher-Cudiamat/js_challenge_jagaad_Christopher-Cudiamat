@@ -5,13 +5,14 @@ import { useSelector } from "react-redux";
 import { AppState } from "../../../redux.config";
 
 const BagIcon: React.FC = () => {
-  const bagData = useSelector((state: AppState) => state.bag.products);
+  const bagDataLength = useSelector(
+    (state: AppState) => state.bag.products.length
+  );
 
-  console.log(bagData);
   return (
     <Fragment>
       <img src={bagIcon} alt="Bag" className="icon" />
-      <span className="bag__item-counter">{bagData.length}</span>
+      <span className="bag__item-counter">{bagDataLength}</span>
     </Fragment>
   );
 };

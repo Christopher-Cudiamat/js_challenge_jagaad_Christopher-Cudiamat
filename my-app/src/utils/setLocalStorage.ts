@@ -11,7 +11,6 @@ export const loadState = (): any => {
 };
 
 export const saveState = (state: { bag: any }): any => {
-  console.log("state", state);
   try {
     const serializedState = JSON.stringify(state);
     localStorage.setItem("state", serializedState);
