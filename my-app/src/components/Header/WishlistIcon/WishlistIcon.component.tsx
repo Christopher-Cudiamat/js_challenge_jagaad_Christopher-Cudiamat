@@ -8,6 +8,7 @@ const WhishlistIcon: React.FC = () => {
   const wishListDataLength = useSelector(
     (state: AppState) => state.wishlist.products.length
   );
+
   return (
     <Fragment>
       <img src={wishlist} alt="Bag" className="icon" />

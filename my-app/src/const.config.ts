@@ -3,4 +3,5 @@ export const textConfig = {
   //Buttons
   IN_CART: "IN CART",
   ADD_TO_CART: "ADD TO CART",
+  CART_SUB_TOTAL: "CART_SUB_TOTAL",
 };

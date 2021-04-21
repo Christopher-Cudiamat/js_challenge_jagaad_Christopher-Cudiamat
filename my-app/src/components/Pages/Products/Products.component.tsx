@@ -10,13 +10,17 @@ import "./products.style.scss";
 import AddToCartButton from "../../UI/Buttons/AddToCartButton/AddToCartButton.component";
 import WishlistButton from "../../UI/Buttons/WishlistButton/WishlistButton.component";
 import Pagination from "../../Pagination/Pagination.component";
-import CartListModal from "../../CartList/CartListModal.component";
+import Modal from "../../UI/Modal/Modal.component";
+import CartList from "../../CartList/CartList.component";
+import { useSelector } from "react-redux";
+import { AppState } from "../../../redux.config";
 
 const Products: React.FC = () => {
   const [products, setProducts] = useState([]);
   const [offset, setOffset] = useState(0);
   const totalProductsLegth = 71;
   const itemPerPage = 6;
+  const uiState = useSelector((state: AppState) => state.ui);
 
   useEffect(() => {
     getProducts(offset).then((res: any) => {
@@ -53,7 +57,9 @@ const Products: React.FC = () => {
         />
       </div>
 
-      <CartListModal />
+      <Modal showModal={uiState.showCartListModal}>
+        <CartList />
+      </Modal>
     </Fragment>
   );
 };

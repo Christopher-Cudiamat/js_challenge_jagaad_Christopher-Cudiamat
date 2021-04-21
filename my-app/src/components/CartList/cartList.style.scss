@@ -1,0 +1,42 @@
+@import "../../sassStyles/variables";
+
+.cart__container {
+  width: 95vw;
+  height: 70vh;
+  overflow-y: scroll;
+  background: $whiteColor;
+}
+
+.cart__no-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & h3 {
+    font-size: 2rem;
+  }
+}
+
+.cartList__total-price {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: $whiteColor;
+  height: 10rem;
+  border-bottom: dotted 1px $textLight1Color;
+  & h4 {
+    font-size: 1.8rem;
+    color: $textLight1Color;
+  }
+
+  & div {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $textColor;
+  }
+}
