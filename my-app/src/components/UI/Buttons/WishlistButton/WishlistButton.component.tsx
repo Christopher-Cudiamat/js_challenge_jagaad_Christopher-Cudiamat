@@ -7,7 +7,10 @@ import { addToWishlist } from "../../../../store/wishlist/wishlist.action";
 import { AppState } from "../../../../redux.config";
 
 const WishlistButton: React.FC<IWishlistButtonProps> = ({ data }) => {
-  const alreadyInCart = useSelector((state: AppState) =>
+  const alreadyInBag = useSelector((state: AppState) =>
+    state.bag.products.find((el: any) => el.uuid === data.uuid)
+  );
+  const alreadyInWishlist = useSelector((state: AppState) =>
     state.wishlist.products.find((el: any) => el.uuid === data.uuid)
   );
 
@@ -16,13 +19,17 @@ const WishlistButton: React.FC<IWishlistButtonProps> = ({ data }) => {
   return (
     <button
       onClick={() => dispatch(addToWishlist(data))}
-      disabled={alreadyInCart}
+      disabled={alreadyInBag || alreadyInWishlist}
       className="product__wishlist-button button--wishlist"
     >
       <img
         src={StarIcon}
         alt="Star"
-        className={alreadyInCart ? "icon wishlist__button--disabled" : "icon"}
+        className={
+          alreadyInBag || alreadyInWishlist
+            ? "icon wishlist__button--disabled"
+            : "icon"
+        }
       />
     </button>
   );
