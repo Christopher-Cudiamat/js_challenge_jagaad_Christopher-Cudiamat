@@ -9,15 +9,20 @@ import { getProducts } from "../../../services/productsController";
 import "./products.style.scss";
 import AddToCartButton from "../../UI/Buttons/AddToCartButton/AddToCartButton.component";
 import WishlistButton from "../../UI/Buttons/WishlistButton/WishlistButton.component";
+import Pagination from "../../Pagination/Pagination.component";
 
 const Products: React.FC = () => {
   const [products, setProducts] = useState([]);
+  const [offset, setOffset] = useState(0);
 
   useEffect(() => {
-    getProducts().then((res: any) => {
+    getProducts(offset).then((res: any) => {
       setProducts(res);
     });
-  }, []);
+  }, [offset]);
+
+  const totalProductsLegth = 71;
+  const itemPerPage = 6;
   return (
     <div>
       <div className="container">
@@ -30,8 +35,6 @@ const Products: React.FC = () => {
               <CardDetails>
                 <CardTitle>{el.title}</CardTitle>
                 <CardDescription>{el.description}</CardDescription>
-                {/* <p>{el.net_price}</p> */}
-                {/* net_price or retail_price => if discount prop is greather than 0, full price is net_price.formatted_value (to be shown as striked) and final price will be retail_price.formatted_value */}
                 <CardPrice
                   discount={el.discount}
                   retailPrice={el.retail_price.formatted_value}
@@ -42,6 +45,11 @@ const Products: React.FC = () => {
             </Card>
           ))}
         </ul>
+        <Pagination
+          setOffset={setOffset}
+          pageCount={totalProductsLegth}
+          ItemPerPage={itemPerPage}
+        />
       </div>
     </div>
   );
