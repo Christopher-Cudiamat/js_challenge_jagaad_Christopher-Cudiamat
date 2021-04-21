@@ -40,7 +40,7 @@ const Products: React.FC = () => {
                   retailPrice={el.retail_price.formatted_value}
                   netPrice={el.original_retail_price.formatted_value}
                 />
-                <AddToCartButton isInCart={true} />
+                <AddToCartButton isInCart={false} data={el} />
               </CardDetails>
             </Card>
           ))}

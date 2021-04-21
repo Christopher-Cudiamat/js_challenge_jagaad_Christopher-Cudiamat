@@ -14,7 +14,7 @@ const Header: React.FC = () => {
           <TotalPrice />
           <BagIcon />
         </div>
-        <div className="header-bag__item header-bag__wishlist-count ">
+        <div className="header-bag__item header-bag__wishlist-count">
           <WishlistIcon />
         </div>
       </aside>
