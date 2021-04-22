@@ -10,12 +10,12 @@ const RemoveQuantityButton: React.FC<IRemoveQuantityButtonProps> = ({
   const dispatch = useDispatch();
 
   return (
-    <div
+    <button
       className="remove__button"
       onClick={() => dispatch(removeProduct(product))}
     >
       -
-    </div>
+    </button>
   );
 };
 

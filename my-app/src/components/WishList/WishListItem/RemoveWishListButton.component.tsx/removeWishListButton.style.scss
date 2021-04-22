@@ -1,0 +1,12 @@
+@import "../../../../sassStyles//variables";
+
+.remove-wishlist__button {
+  background: $greyColor;
+  color: $blackColor;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  right: 0rem;
+  top: 0rem;
+}

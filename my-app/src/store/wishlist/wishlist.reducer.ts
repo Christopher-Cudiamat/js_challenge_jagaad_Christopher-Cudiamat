@@ -2,6 +2,7 @@ import {
   ADD_TO_WISHLIST,
   WishlistReducerActions,
   IWishListState,
+  REMOVE_SINGLE_WISHLIST,
 } from "./wishlist.type";
 
 const initialState: IWishListState = {
@@ -17,6 +18,16 @@ export const wishlistReducer = (
       return {
         ...state,
         products: [...state.products, action.payload],
+      };
+    }
+    case REMOVE_SINGLE_WISHLIST: {
+      const filteredProducts = state.products.filter(
+        (el: any) => el.uuid !== action.payload.uuid
+      );
+
+      return {
+        ...state,
+        products: filteredProducts,
       };
     }
     default:

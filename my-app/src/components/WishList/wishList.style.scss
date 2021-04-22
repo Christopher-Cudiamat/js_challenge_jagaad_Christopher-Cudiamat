@@ -1,0 +1,22 @@
+@import "../../sassStyles/variables";
+
+.whishlist-item__container {
+  padding: 3rem;
+}
+
+.cart__container {
+  width: 100vw;
+  height: 80vh;
+  overflow-y: scroll;
+  background: $whiteColor;
+}
+
+.cart__no-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & h3 {
+    font-size: 2rem;
+  }
+}

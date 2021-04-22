@@ -8,9 +8,12 @@ const AddQuantityButton: React.FC<IAddQuantityButtonProps> = ({ product }) => {
   const dispatch = useDispatch();
 
   return (
-    <div className="add__button" onClick={() => dispatch(addProducts(product))}>
+    <button
+      className="add__button"
+      onClick={() => dispatch(addProducts(product))}
+    >
       +
-    </div>
+    </button>
   );
 };
 

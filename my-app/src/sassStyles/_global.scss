@@ -1,6 +1,7 @@
 //This partial contains styling that overrides global elements, such as the #root or body elements.
 
 @import "./variables";
+@import "./typography";
 
 @font-face {
   font-family: "Lato-Regular";
@@ -139,52 +140,6 @@ video {
   vertical-align: baseline;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: normal;
-}
-a {
-  text-decoration: none;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-li {
-  cursor: pointer;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -192,9 +147,9 @@ table {
 img {
   max-width: 100%;
 }
-a {
-  text-decoration: none;
-}
+
 button {
   outline: none;
+  appearance: none;
+  border: none;
 }

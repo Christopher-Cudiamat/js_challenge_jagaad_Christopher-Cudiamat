@@ -1,35 +1,42 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { AppState } from "../../redux.config";
-import { getDistinctElement } from "../../utils/getDistinctElement";
-import AddToCartButton from "../UI/Buttons/AddToCartButton/AddToCartButton.component";
-import Card from "../UI/Card/Card.component";
-import CardDetails from "../UI/Card/CardDetails/CardDetails.component";
-import CardMedia from "../UI/Card/CardMedia/CardMedia.component";
-import CardPrice from "../UI/Card/CardPrice/CardPrice.component";
-import CardTitle from "../UI/Card/CardTitle/CardTitle.component";
+import WishListItem from "./WishListItem/WishListItem.component";
+import "./wishList.style.scss";
 
 const WishList: React.FC = () => {
-  const products = useSelector((state: AppState) => state.bag.products);
+  const wishlistproducts = useSelector(
+    (state: AppState) => state.wishlist.products
+  );
+
+  const cartProducts = useSelector((state: AppState) => state.bag.products);
+  console.log("wishlistproducts", wishlistproducts);
+  console.log("cartProducts", cartProducts);
+  const filteredProducts = wishlistproducts.filter((el) =>
+    cartProducts.every((el2) => el2.uuid !== el.uuid)
+  );
+
+  console.log("fil", filteredProducts);
 
   return (
-    <ul>
-      {products?.map((el: any) => (
-        <Card key={el.uuid}>
-          <CardMedia image={el.cover_image_url} />
-
-          <CardDetails>
-            <CardTitle>{el.title}</CardTitle>
-            <CardPrice
-              discount={el.discount}
-              retailPrice={el.retail_price.formatted_value}
-              netPrice={el.original_retail_price.formatted_value}
-            />
-            <AddToCartButton data={el} />
-          </CardDetails>
-        </Card>
-      ))}
-    </ul>
+    <div
+      className={
+        filteredProducts.length > 0
+          ? "cart__container"
+          : "cart__container cart__no-result"
+      }
+    >
+      <h3>Wishlist</h3>
+      {filteredProducts.length > 0 ? (
+        <ul className="whishlist-item__container">
+          {filteredProducts.map((el: any) => (
+            <WishListItem key={el.uuid} product={el} />
+          ))}
+        </ul>
+      ) : (
+        <h3>No product found</h3>
+      )}
+    </div>
   );
 };
 

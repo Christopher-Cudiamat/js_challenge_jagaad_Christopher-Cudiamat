@@ -8,12 +8,12 @@ import { IRemoveAllButtonProps } from "./removeAllButton.type";
 const RemoveAllButton: React.FC<IRemoveAllButtonProps> = ({ product }) => {
   const dispatch = useDispatch();
   return (
-    <div
+    <button
       className="remove-icon"
       onClick={() => dispatch(removeProducts(product))}
     >
       {textConfig.REMOVE_ITEM}
-    </div>
+    </button>
   );
 };
 
