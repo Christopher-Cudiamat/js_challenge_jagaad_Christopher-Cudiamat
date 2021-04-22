@@ -3,7 +3,7 @@ import bagIcon from "../../../assets/svgs/bag.svg";
 import "./bagIcon.style.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { AppState } from "../../../redux.config";
-import { setToggle } from "../../../store/ui/ui.action";
+import { setToggle } from "../../../store/modals/modals.action";
 
 const BagIcon: React.FC = () => {
   const bagDataLength = useSelector(

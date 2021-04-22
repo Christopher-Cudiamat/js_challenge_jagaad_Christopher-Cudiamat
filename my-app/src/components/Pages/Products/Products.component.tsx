@@ -14,13 +14,14 @@ import Modal from "../../UI/Modal/Modal.component";
 import CartList from "../../CartList/CartList.component";
 import { useSelector } from "react-redux";
 import { AppState } from "../../../redux.config";
+import WishList from "../../WishList/WishList.component";
 
 const Products: React.FC = () => {
   const [products, setProducts] = useState([]);
   const [offset, setOffset] = useState(0);
   const totalProductsLegth = 71;
   const itemPerPage = 6;
-  const uiState = useSelector((state: AppState) => state.ui);
+  const modals = useSelector((state: AppState) => state.modals);
 
   useEffect(() => {
     getProducts(offset).then((res: any) => {
@@ -57,8 +58,11 @@ const Products: React.FC = () => {
         />
       </div>
 
-      <Modal showModal={uiState.showCartListModal}>
+      <Modal showModal={modals.showCartListModal}>
         <CartList />
+      </Modal>
+      <Modal showModal={modals.showWishListModal}>
+        <WishList />
       </Modal>
     </Fragment>
   );

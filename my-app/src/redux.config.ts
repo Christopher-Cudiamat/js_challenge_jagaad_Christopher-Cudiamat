@@ -1,12 +1,12 @@
 import { combineReducers } from "redux";
 import { bagReducer } from "./store/bag/bag.reducer";
-import { uiReducer } from "./store/ui/ui.reducer";
+import { modalsReducer } from "./store/modals/modals.reducer";
 import { wishlistReducer } from "./store/wishlist/wishlist.reducer";
 
 export const appReducer = combineReducers({
   bag: bagReducer,
   wishlist: wishlistReducer,
-  ui: uiReducer,
+  modals: modalsReducer,
 });
 
 export const rootReducer = (state: any, action: any) => {
