@@ -31,4 +31,12 @@
     font-weight: bold;
     margin-bottom: 1rem;
   }
+  & div:last-child {
+    display: flex;
+    & p {
+      font-size: 1.6rem;
+      font-weight: normal;
+      color: $textLight1Color;
+    }
+  }
 }

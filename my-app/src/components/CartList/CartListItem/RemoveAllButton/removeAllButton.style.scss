@@ -1,0 +1,7 @@
+@import "../../../../sassStyles/variables";
+.remove-icon {
+  color: $warningColor;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+}

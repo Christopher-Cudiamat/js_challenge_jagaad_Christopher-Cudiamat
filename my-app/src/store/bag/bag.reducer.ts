@@ -1,4 +1,11 @@
-import { ADD_PRODUCT, BagReducerAction, IBagState } from "./bag.type";
+import { getDiscountedPrice } from "../../utils/getDiscountedPrice";
+import {
+  ADD_PRODUCT,
+  BagReducerAction,
+  IBagState,
+  REMOVE_PRODUCT,
+  REMOVE_PRODUCTS,
+} from "./bag.type";
 
 const initialState: IBagState = {
   products: [],
@@ -11,14 +18,55 @@ export const bagReducer = (
 ): IBagState => {
   switch (action.type) {
     case ADD_PRODUCT: {
-      let newPrice = action.payload.original_retail_price.value;
-      if (action.payload.discount > 0) {
-        newPrice = action.payload.retail_price.value;
-      }
+      const newPrice = getDiscountedPrice(
+        action.payload.discount,
+        action.payload.retail_price.value,
+        action.payload.original_retail_price.value
+      );
+
       return {
         ...state,
         totalPrice: state.totalPrice + newPrice,
         products: [...state.products, action.payload],
+      };
+    }
+    case REMOVE_PRODUCTS: {
+      const newProductsList = state.products.filter(
+        (el: any) => el.uuid !== action.payload.uuid
+      );
+      const newPrice = getDiscountedPrice(
+        action.payload.discount,
+        action.payload.retail_price.value,
+        action.payload.original_retail_price.value
+      );
+
+      return {
+        ...state,
+        totalPrice: state.totalPrice - newPrice,
+        products: newProductsList,
+      };
+    }
+    case REMOVE_PRODUCT: {
+      const a = state.products
+        .filter((el: any) => el.uuid === action.payload.uuid)
+        .splice(0, 1);
+
+      const b = state.products.filter(
+        (el: any) => el.uuid !== action.payload.uuid
+      );
+      console.log("A", a);
+      console.log("B", b);
+
+      const newPrice = getDiscountedPrice(
+        action.payload.discount,
+        action.payload.retail_price.value,
+        action.payload.original_retail_price.value
+      );
+
+      return {
+        ...state,
+        totalPrice: state.totalPrice - newPrice,
+        products: [...a, ...b],
       };
     }
     default:

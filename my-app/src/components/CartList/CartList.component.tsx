@@ -6,9 +6,11 @@ import TotalPrice from "../Header/TotalPrice/TotalPrice.component";
 import "./cartList.style.scss";
 import CartListItem from "./CartListItem/CartListItem.component";
 import "./cartList.style.scss";
+import { getDistinctElement } from "../../utils/getDistinctElement";
 
 const CartList: React.FC = () => {
-  const cartProducts = useSelector((state: AppState) => state.bag.products);
+  const products = useSelector((state: AppState) => state.bag.products);
+  const cartProducts = getDistinctElement(products, "uuid");
 
   return (
     <div
@@ -22,7 +24,11 @@ const CartList: React.FC = () => {
         <Fragment>
           <ul>
             {cartProducts.map((el: any) => (
-              <CartListItem key={el.uuid} product={el} />
+              <CartListItem
+                key={el.uuid}
+                product={el}
+                productsList={products}
+              />
             ))}
           </ul>
           <div className="cartList__total-price">

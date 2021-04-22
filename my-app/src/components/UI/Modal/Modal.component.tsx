@@ -11,12 +11,13 @@ const Modal: React.FC<IModalProps> = ({ showModal, children }) => {
   return (
     <Fragment>
       {showModal && (
-        <Backdrop
-          variant={"dark"}
-          onClick={() => dispatch(setToggle("showCartListModal"))}
-        >
+        <div>
+          <Backdrop
+            variant={"dark"}
+            onClick={() => dispatch(setToggle("showCartListModal"))}
+          />
           <div className="modal">{children}</div>
-        </Backdrop>
+        </div>
       )}
     </Fragment>
   );

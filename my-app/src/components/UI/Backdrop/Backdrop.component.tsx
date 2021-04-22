@@ -2,7 +2,7 @@ import React from "react";
 import { IBackdropProps } from "./backdrop.type";
 import "./backdrop.style.scss";
 
-const Backdrop: React.FC<IBackdropProps> = ({ onClick, variant, children }) => {
+const Backdrop: React.FC<IBackdropProps> = ({ onClick, variant }) => {
   return (
     <div
       onClick={onClick}
@@ -11,9 +11,7 @@ const Backdrop: React.FC<IBackdropProps> = ({ onClick, variant, children }) => {
           ? "backdrop backdrop__light"
           : "backdrop backdrop__dark"
       }
-    >
-      {children}
-    </div>
+    />
   );
 };
 
