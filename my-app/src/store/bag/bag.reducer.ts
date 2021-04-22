@@ -49,13 +49,11 @@ export const bagReducer = (
     case REMOVE_PRODUCT: {
       const a = state.products
         .filter((el: any) => el.uuid === action.payload.uuid)
-        .splice(0, 1);
+        .splice(-1, 1);
 
       const b = state.products.filter(
         (el: any) => el.uuid !== action.payload.uuid
       );
-      console.log("A", a);
-      console.log("B", b);
 
       const newPrice = getDiscountedPrice(
         action.payload.discount,
@@ -66,7 +64,7 @@ export const bagReducer = (
       return {
         ...state,
         totalPrice: state.totalPrice - newPrice,
-        products: [...a, ...b],
+        products: [...b, ...a],
       };
     }
     default:

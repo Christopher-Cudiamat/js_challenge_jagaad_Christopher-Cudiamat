@@ -21,7 +21,7 @@
 }
 
 .cartItem__details {
-  padding: 1rem;
+  padding: 1rem 0rem;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -32,11 +32,25 @@
     margin-bottom: 1rem;
   }
   & div:last-child {
-    display: flex;
     & p {
       font-size: 1.6rem;
       font-weight: normal;
       color: $textLight1Color;
+    }
+  }
+}
+
+.cartItem__buttons-container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  & div:last-child {
+    display: flex;
+    align-items: center;
+
+    & p {
+      padding: 0rem 0.8rem;
     }
   }
 }

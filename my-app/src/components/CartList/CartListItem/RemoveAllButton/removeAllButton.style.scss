@@ -1,7 +1,11 @@
 @import "../../../../sassStyles/variables";
 .remove-icon {
-  color: $warningColor;
-  border-radius: 50%;
-  font-size: 2rem;
+  background: $warningColor;
+  color: $whiteColor;
+  border-radius: 0.5rem;
+  font-size: 1rem;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: 0.4rem 0.2rem;
 }

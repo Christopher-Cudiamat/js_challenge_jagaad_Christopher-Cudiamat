@@ -28,12 +28,12 @@ const CartListItem: React.FC<ICartListItemProps> = ({
           <p>{retail_price.formatted_value}</p>
         </div>
       </div>
-      <div>
+      <div className="cartItem__buttons-container">
         <RemoveAllButton product={product} />
         <div>
           <AddQuantityButton product={product} />
-          <RemoveQuantityButton product={product} />
           <p>{`${quantity}`}</p>
+          <RemoveQuantityButton product={product} />
         </div>
       </div>
     </li>

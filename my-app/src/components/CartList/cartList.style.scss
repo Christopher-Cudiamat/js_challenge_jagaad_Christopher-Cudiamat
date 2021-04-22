@@ -1,8 +1,8 @@
 @import "../../sassStyles/variables";
 
 .cart__container {
-  width: 95vw;
-  height: 70vh;
+  width: 100vw;
+  height: 55vh;
   overflow-y: scroll;
   background: $whiteColor;
 }
@@ -23,12 +23,13 @@
   padding: 1rem;
   align-items: center;
   position: absolute;
-  bottom: 0;
+  bottom: -10rem;
   left: 0;
   width: 100%;
   background: $whiteColor;
   height: 10rem;
   border-bottom: dotted 1px $textLight1Color;
+  box-shadow: 0 -5px 5px -3px $greyColor;
   & h4 {
     font-size: 1.8rem;
     color: $textLight1Color;
