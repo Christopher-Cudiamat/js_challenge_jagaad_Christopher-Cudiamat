@@ -1,11 +1,12 @@
-@import "../../../sassStyles//variables";
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
 
 .product-list__item {
-  padding: 1rem;
+  padding: 1 0rem;
   width: 100%;
-  @media only screen and (min-width: 600px) {
-    flex: 1 0 33.3333%;
-    max-width: 33.3333%;
+  flex: 1 0 100%;
+  @include customMinBreakPoint(500) {
+    padding: 1rem;
   }
 }
 

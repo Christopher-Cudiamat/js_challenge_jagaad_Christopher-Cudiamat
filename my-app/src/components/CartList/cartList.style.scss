@@ -1,11 +1,5 @@
+@import "../../sassStyles/mixins";
 @import "../../sassStyles/variables";
-
-.cart__container {
-  width: 100vw;
-  height: 55vh;
-  overflow-y: scroll;
-  background: $whiteColor;
-}
 
 .cart__no-result {
   display: flex;
@@ -30,6 +24,7 @@
   height: 10rem;
   border-bottom: dotted 1px $textLight1Color;
   box-shadow: 0 -5px 5px -3px $greyColor;
+
   & h4 {
     font-size: 1.8rem;
     color: $textLight1Color;
@@ -39,5 +34,16 @@
     font-size: 2rem;
     font-weight: bold;
     color: $textColor;
+  }
+}
+
+.cart__container {
+  width: 80vw;
+  height: 55vh;
+  overflow-y: scroll;
+  background: $whiteColor;
+
+  @include customMinBreakPoint(600) {
+    width: 80vw;
   }
 }

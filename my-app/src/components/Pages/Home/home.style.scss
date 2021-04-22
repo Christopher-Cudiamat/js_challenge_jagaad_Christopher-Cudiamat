@@ -1,0 +1,36 @@
+@import "../../../sassStyles/mixins";
+
+.container {
+  @include container;
+  padding: 2rem;
+
+  @include customMinBreakPoint(800) {
+    padding: 4rem;
+  }
+}
+
+.product-list {
+  display: flex;
+  flex: 0 1 auto;
+  flex-flow: column;
+  align-items: center;
+
+  @include smMinBreakPoint {
+    flex-flow: row wrap;
+    margin: 0 -10px;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+  & > li {
+    @include smMinBreakPoint {
+      flex: 1 0 48%;
+      max-width: 48%;
+    }
+
+    @include lgMinBreakPoint {
+      flex: 1 0 33.3333%;
+      max-width: 33.3333%;
+    }
+  }
+}

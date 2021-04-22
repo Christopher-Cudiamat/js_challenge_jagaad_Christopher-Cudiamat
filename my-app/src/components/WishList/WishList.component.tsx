@@ -10,13 +10,10 @@ const WishList: React.FC = () => {
   );
 
   const cartProducts = useSelector((state: AppState) => state.bag.products);
-  console.log("wishlistproducts", wishlistproducts);
-  console.log("cartProducts", cartProducts);
+
   const filteredProducts = wishlistproducts.filter((el) =>
     cartProducts.every((el2) => el2.uuid !== el.uuid)
   );
-
-  console.log("fil", filteredProducts);
 
   return (
     <div
@@ -26,7 +23,6 @@ const WishList: React.FC = () => {
           : "cart__container cart__no-result"
       }
     >
-      <h3>Wishlist</h3>
       {filteredProducts.length > 0 ? (
         <ul className="whishlist-item__container">
           {filteredProducts.map((el: any) => (

@@ -6,7 +6,7 @@ import CardMedia from "../../UI/Card/CardMedia/CardMedia.component";
 import CardPrice from "../../UI/Card/CardPrice/CardPrice.component";
 import CardTitle from "../../UI/Card/CardTitle/CardTitle.component";
 import { getProducts } from "../../../services/productsController";
-import "./products.style.scss";
+import "./home.style.scss";
 import AddToCartButton from "../../UI/Buttons/AddToCartButton/AddToCartButton.component";
 import WishlistButton from "../../UI/Buttons/WishlistButton/WishlistButton.component";
 import Pagination from "../../Pagination/Pagination.component";
@@ -16,7 +16,7 @@ import { useSelector } from "react-redux";
 import { AppState } from "../../../redux.config";
 import WishList from "../../WishList/WishList.component";
 
-const Products: React.FC = () => {
+const Home: React.FC = () => {
   const [products, setProducts] = useState([]);
   const [offset, setOffset] = useState(0);
   const totalProductsLegth = 71;
@@ -68,4 +68,4 @@ const Products: React.FC = () => {
   );
 };
 
-export default Products;
+export default Home;

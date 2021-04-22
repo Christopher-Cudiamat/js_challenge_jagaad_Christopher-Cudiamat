@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
-import Products from "./Products/Products.component";
+import Home from "./Home/home.component";
 
 const Pages: React.FC = () => {
   return (
     <Fragment>
-      <Products />
+      <Home />
     </Fragment>
   );
 };
