@@ -31,9 +31,9 @@ const CartListItem: React.FC<ICartListItemProps> = ({
       <div className="cartItem__buttons-container">
         <RemoveAllButton product={product} quantity={quantity} />
         <div>
-          <AddQuantityButton product={product} />
-          <p>{`${quantity}`}</p>
           <RemoveQuantityButton product={product} quantity={quantity} />
+          <p>{`${quantity}`}</p>
+          <AddQuantityButton product={product} />
         </div>
       </div>
     </li>

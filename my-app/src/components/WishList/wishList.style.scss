@@ -18,6 +18,15 @@
   @include customMinBreakPoint(1200) {
     width: 60vw;
   }
+
+  & > ul > li > article > figure {
+    padding: 0;
+  }
+
+  & > ul > li > article > div {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .whishlist-item__container {

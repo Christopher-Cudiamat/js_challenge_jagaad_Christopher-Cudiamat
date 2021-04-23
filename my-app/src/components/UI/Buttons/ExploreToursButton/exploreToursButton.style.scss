@@ -1,0 +1,9 @@
+@import "../../../../sassStyles/_mixins.scss";
+
+.exploreTours__button {
+  @include button;
+  @include button--primary;
+  @include button--blue;
+  display: block;
+  margin: 1.5rem;
+}

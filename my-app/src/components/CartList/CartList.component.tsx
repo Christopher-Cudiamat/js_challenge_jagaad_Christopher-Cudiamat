@@ -7,6 +7,7 @@ import "./cartList.style.scss";
 import CartListItem from "./CartListItem/CartListItem.component";
 import "./cartList.style.scss";
 import { getDistinctElement } from "../../utils/getDistinctElement";
+import ExploreToursButton from "../UI/Buttons/ExploreToursButton/ExploreToursButton.component";
 
 const CartList: React.FC = () => {
   const products = useSelector((state: AppState) => state.bag.products);
@@ -37,7 +38,10 @@ const CartList: React.FC = () => {
           </div>
         </Fragment>
       ) : (
-        <h3>No product found</h3>
+        <Fragment>
+          <h3>No product found</h3>
+          <ExploreToursButton />
+        </Fragment>
       )}
     </div>
   );

@@ -43,11 +43,11 @@ export const bagReducer = (
         action.payload.original_retail_price.value
       );
 
-      const removeProductsPrice = newPrice * action.quantity;
+      const removedProductsPrice = newPrice * action.quantity;
 
       return {
         ...state,
-        totalPrice: state.totalPrice - removeProductsPrice,
+        totalPrice: state.totalPrice - removedProductsPrice,
         products: newProductsList,
       };
     }
