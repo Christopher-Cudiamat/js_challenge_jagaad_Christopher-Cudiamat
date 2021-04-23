@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import Home from "./Home/home.component";
+import Home from "./Home/Home.component";
 
 const Pages: React.FC = () => {
   return (

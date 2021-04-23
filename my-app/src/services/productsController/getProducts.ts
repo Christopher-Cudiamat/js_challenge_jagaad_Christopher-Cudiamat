@@ -1,4 +1,4 @@
-import { instanceGet } from "../axios";
+import { instanceGet } from "../../axios";
 
 //This API call fetch the list products from the server with six datas per page
 export const getProducts = async (offset: number): Promise<any> => {
