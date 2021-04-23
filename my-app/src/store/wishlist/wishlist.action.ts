@@ -1,3 +1,4 @@
+import { IProductData } from "../../services/productsController/getProducts.type";
 import {
   ADD_TO_WISHLIST,
   IAddToWishlistAction,
@@ -5,7 +6,7 @@ import {
   REMOVE_SINGLE_WISHLIST,
 } from "./wishlist.type";
 
-export const addToWishlist = (product: any): IAddToWishlistAction => {
+export const addToWishlist = (product: IProductData): IAddToWishlistAction => {
   return {
     type: ADD_TO_WISHLIST,
     payload: product,
@@ -13,7 +14,7 @@ export const addToWishlist = (product: any): IAddToWishlistAction => {
 };
 
 export const removeSingleWishlist = (
-  product: any
+  product: IProductData
 ): IRemoveSingleWishlistAction => {
   return {
     type: REMOVE_SINGLE_WISHLIST,

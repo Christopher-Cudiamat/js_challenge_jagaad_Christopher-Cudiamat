@@ -1,3 +1,4 @@
+import { IProductData } from "../../../services/productsController/getProducts.type";
 export interface IWishListItemProps {
-  product: any;
+  product: IProductData;
 }

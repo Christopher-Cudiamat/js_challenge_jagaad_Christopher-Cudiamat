@@ -5,13 +5,14 @@ import { IWishlistButtonProps } from "./wishlistButton.type";
 import { useDispatch, useSelector } from "react-redux";
 import { addToWishlist } from "../../../../store/wishlist/wishlist.action";
 import { AppState } from "../../../../redux.config";
+import { IProductData } from "../../../../services/productsController/getProducts.type";
 
 const WishlistButton: React.FC<IWishlistButtonProps> = ({ data }) => {
   const alreadyInBag = useSelector((state: AppState) =>
-    state.bag.products.find((el: any) => el.uuid === data.uuid)
+    state.bag.products.some((el: IProductData) => el.uuid === data.uuid)
   );
   const alreadyInWishlist = useSelector((state: AppState) =>
-    state.wishlist.products.find((el: any) => el.uuid === data.uuid)
+    state.wishlist.products.some((el: IProductData) => el.uuid === data.uuid)
   );
 
   const dispatch = useDispatch();

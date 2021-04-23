@@ -4,6 +4,7 @@ import { AppState } from "../../redux.config";
 import WishListItem from "./WishListItem/WishListItem.component";
 import "./wishList.style.scss";
 import ExploreToursButton from "../UI/Buttons/ExploreToursButton/ExploreToursButton.component";
+import { IProductData } from "../../services/productsController/getProducts.type";
 
 const WishList: React.FC = () => {
   const wishlistproducts = useSelector(
@@ -20,7 +21,7 @@ const WishList: React.FC = () => {
     >
       {wishlistproducts.length > 0 ? (
         <ul className="whishlist-item__container">
-          {wishlistproducts.map((el: any) => (
+          {wishlistproducts.map((el: IProductData) => (
             <WishListItem key={el.uuid} product={el} />
           ))}
         </ul>

@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { IProductData } from "../services/productsController/getProducts.type";
+
 export const loadState = (): any => {
   try {
     const serializedState = localStorage.getItem("state");
@@ -10,7 +13,7 @@ export const loadState = (): any => {
   }
 };
 
-export const saveState = (state: { bag: any }): any => {
+export const saveState = (state: { bag: IProductData[] }): any => {
   try {
     const serializedState = JSON.stringify(state);
     localStorage.setItem("state", serializedState);

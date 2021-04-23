@@ -1,3 +1,4 @@
+import { IProductData } from "../../services/productsController/getProducts.type";
 import {
   ADD_PRODUCT,
   IAddProductAction,
@@ -7,7 +8,10 @@ import {
   REMOVE_PRODUCTS,
 } from "./bag.type";
 
-export const addProducts = (product: any, quantity = 1): IAddProductAction => {
+export const addProducts = (
+  product: IProductData,
+  quantity = 1
+): IAddProductAction => {
   return {
     type: ADD_PRODUCT,
     payload: product,
@@ -16,7 +20,7 @@ export const addProducts = (product: any, quantity = 1): IAddProductAction => {
 };
 
 export const removeProduct = (
-  product: any,
+  product: IProductData,
   quantity = 1
 ): IRemoveProductAction => {
   return {
@@ -27,7 +31,7 @@ export const removeProduct = (
 };
 
 export const removeProducts = (
-  product: any,
+  product: IProductData,
   quantity: number
 ): IRemoveProductsAction => {
   return {

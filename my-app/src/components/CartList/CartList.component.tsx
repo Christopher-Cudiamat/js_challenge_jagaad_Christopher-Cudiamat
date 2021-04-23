@@ -8,6 +8,7 @@ import CartListItem from "./CartListItem/CartListItem.component";
 import "./cartList.style.scss";
 import { getDistinctElement } from "../../utils/getDistinctElement";
 import ExploreToursButton from "../UI/Buttons/ExploreToursButton/ExploreToursButton.component";
+import { IProductData } from "../../services/productsController/getProducts.type";
 
 const CartList: React.FC = () => {
   const products = useSelector((state: AppState) => state.bag.products);
@@ -24,7 +25,7 @@ const CartList: React.FC = () => {
       {cartProducts.length > 0 ? (
         <Fragment>
           <ul>
-            {cartProducts.map((el: any) => (
+            {cartProducts.map((el: IProductData) => (
               <CartListItem
                 key={el.uuid}
                 product={el}

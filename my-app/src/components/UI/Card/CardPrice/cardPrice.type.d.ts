@@ -1,5 +1,5 @@
 export interface ICardPriceProps {
-  netPrice?: number;
+  netPrice: string;
   discount: number;
-  retailPrice: number;
+  retailPrice: string;
 }

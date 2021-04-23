@@ -34,7 +34,8 @@
         "semi": true,
         "jsxSingleQuote": false,
         "singleQuote": false,
-        "useTabs": false
+        "useTabs": false,
+        "endOfLine": "auto"
       }
     ]
   }

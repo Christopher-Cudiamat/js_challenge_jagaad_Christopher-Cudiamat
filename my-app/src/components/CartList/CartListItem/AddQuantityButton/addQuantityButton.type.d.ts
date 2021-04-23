@@ -1,3 +1,5 @@
+import { IProductData } from "../../../../services/productsController/getProducts.type";
+
 export interface IAddQuantityButtonProps {
-  product: any;
+  product: IProductData;
 }

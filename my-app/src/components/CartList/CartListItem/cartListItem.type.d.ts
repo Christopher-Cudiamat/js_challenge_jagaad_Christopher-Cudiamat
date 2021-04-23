@@ -1,4 +1,5 @@
+import { IProductData } from "../../../services/productsController/getProducts.type";
 export interface ICartListItemProps {
-  product: any;
-  productsList: any[];
+  product: IProductData;
+  productsList: IProductData[];
 }

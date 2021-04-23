@@ -1,3 +1,4 @@
+import { IProductData } from "../../services/productsController/getProducts.type";
 import {
   ADD_TO_WISHLIST,
   WishlistReducerActions,
@@ -22,7 +23,7 @@ export const wishlistReducer = (
     }
     case REMOVE_SINGLE_WISHLIST: {
       const filteredProducts = state.products.filter(
-        (el: any) => el.uuid !== action.payload.uuid
+        (el: IProductData) => el.uuid !== action.payload.uuid
       );
 
       return {

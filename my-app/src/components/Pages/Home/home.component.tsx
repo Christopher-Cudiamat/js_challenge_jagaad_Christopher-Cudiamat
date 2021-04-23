@@ -15,9 +15,11 @@ import CartList from "../../CartList/CartList.component";
 import { useSelector } from "react-redux";
 import { AppState } from "../../../redux.config";
 import WishList from "../../WishList/WishList.component";
+import { IProductData } from "../../../services/productsController/getProducts.type";
 
 const Home: React.FC = () => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<IProductData[] | []>([]);
+
   const [offset, setOffset] = useState(0);
   //the Api does not return total count of products
   const totalProductsLegth = 71;
@@ -25,7 +27,7 @@ const Home: React.FC = () => {
   const modals = useSelector((state: AppState) => state.modals);
 
   useEffect(() => {
-    getProducts(offset).then((res: any) => {
+    getProducts(offset).then((res: IProductData[]) => {
       setProducts(res);
     });
   }, [offset]);
@@ -34,7 +36,7 @@ const Home: React.FC = () => {
     <Fragment>
       <div className="container">
         <ul className="product-list">
-          {products?.map((el: any) => (
+          {products?.map((el: IProductData) => (
             <Card key={el.uuid}>
               <CardMedia image={el.cover_image_url}>
                 <WishlistButton data={el} />

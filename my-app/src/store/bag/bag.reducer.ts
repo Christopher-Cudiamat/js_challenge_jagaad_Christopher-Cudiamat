@@ -1,3 +1,4 @@
+import { IProductData } from "../../services/productsController/getProducts.type";
 import { getDiscountedPrice } from "../../utils/getDiscountedPrice";
 import {
   ADD_PRODUCT,
@@ -35,7 +36,7 @@ export const bagReducer = (
     // Remove all quantity of an item in the cart list
     case REMOVE_PRODUCTS: {
       const newProductsList = state.products.filter(
-        (el: any) => el.uuid !== action.payload.uuid
+        (el: IProductData) => el.uuid !== action.payload.uuid
       );
       const newPrice = getDiscountedPrice(
         action.payload.discount,
@@ -55,11 +56,11 @@ export const bagReducer = (
     // Remove one quantity of an item in the cart list
     case REMOVE_PRODUCT: {
       const a = state.products
-        .filter((el: any) => el.uuid === action.payload.uuid)
+        .filter((el: IProductData) => el.uuid === action.payload.uuid)
         .splice(action.quantity);
 
       const b = state.products.filter(
-        (el: any) => el.uuid !== action.payload.uuid
+        (el: IProductData) => el.uuid !== action.payload.uuid
       );
 
       const newPrice = getDiscountedPrice(

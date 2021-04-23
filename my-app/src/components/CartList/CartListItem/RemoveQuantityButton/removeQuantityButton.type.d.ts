@@ -1,4 +1,5 @@
+import { IProductData } from "../../../../services/productsController/getProducts.type";
 export interface IRemoveQuantityButtonProps {
-  product: any;
+  product: IProductData;
   quantity: number;
 }
