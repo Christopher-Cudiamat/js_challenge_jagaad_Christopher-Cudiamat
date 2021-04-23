@@ -6,7 +6,6 @@ import CardMedia from "../../UI/Card/CardMedia/CardMedia.component";
 import CardPrice from "../../UI/Card/CardPrice/CardPrice.component";
 import CardTitle from "../../UI/Card/CardTitle/CardTitle.component";
 import { IWishListItemProps } from "./wishListItem.type";
-import "./wishListItem.style.scss";
 import RemoveWishtlistButton from "./RemoveWishListButton.component.tsx/RemoveWishListbutton.component";
 
 const WishListItem: React.FC<IWishListItemProps> = ({ product }) => {

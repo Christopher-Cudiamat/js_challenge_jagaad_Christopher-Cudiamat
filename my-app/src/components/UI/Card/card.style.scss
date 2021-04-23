@@ -5,6 +5,7 @@
   padding: 1 0rem;
   width: 100%;
   flex: 1 0 100%;
+  margin-bottom: 2rem;
   @include customMinBreakPoint(500) {
     padding: 1rem;
   }

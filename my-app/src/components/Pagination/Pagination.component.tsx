@@ -12,7 +12,7 @@ const Pagination: React.FC<IPaginationProps> = ({
   const [page, setPage] = useState(0);
   const totalPage = Math.ceil(pageCount / ItemPerPage);
   const marginPagesDisplayed = 2;
-  const pageRangeDisplayed = 4;
+  const pageRangeDisplayed = 1;
 
   const handleOnClick = (data: IDataPagination) => {
     setOffset(data.selected * ItemPerPage);
