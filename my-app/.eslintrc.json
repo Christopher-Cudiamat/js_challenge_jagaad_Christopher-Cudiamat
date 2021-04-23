@@ -7,7 +7,8 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "react-app/jest",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -17,13 +18,24 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "react-hooks"],
+  "plugins": ["react", "@typescript-eslint", "react-hooks", "prettier"],
   "rules": {
     "react/prop-types": "off",
     "import/prefer-default-export": "off",
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": ["error"],
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": "warn",
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 80,
+        "trailingComma": "es5",
+        "semi": true,
+        "jsxSingleQuote": false,
+        "singleQuote": false,
+        "useTabs": false
+      }
+    ]
   }
 }
