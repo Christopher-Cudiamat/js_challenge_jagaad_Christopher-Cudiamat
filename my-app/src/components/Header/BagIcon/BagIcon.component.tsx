@@ -4,6 +4,7 @@ import "./bagIcon.style.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { AppState } from "../../../redux.config";
 import { setToggle } from "../../../store/modals/modals.action";
+import NotificationIcon from "../../UI/NotificationIcon/NotificationIcon.component";
 
 const BagIcon: React.FC = () => {
   const bagDataLength = useSelector(
@@ -19,7 +20,10 @@ const BagIcon: React.FC = () => {
         className="icon"
         onClick={() => dispatch(setToggle("showCartListModal"))}
       />
-      <span className="bag__item-counter">{bagDataLength}</span>
+      <NotificationIcon
+        count={bagDataLength}
+        showNotification={bagDataLength > 0}
+      />
     </Fragment>
   );
 };

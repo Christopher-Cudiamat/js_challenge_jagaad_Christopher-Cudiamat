@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import wishlist from "../../../assets/svgs/wishlist.svg";
 import { AppState } from "../../../redux.config";
 import { setToggle } from "../../../store/modals/modals.action";
+import NotificationIcon from "../../UI/NotificationIcon/NotificationIcon.component";
 import "./wishlistIcon.style.scss";
 
 const WhishlistIcon: React.FC = () => {
@@ -20,7 +21,10 @@ const WhishlistIcon: React.FC = () => {
         className="icon"
         onClick={() => dispatch(setToggle("showWishListModal"))}
       />
-      <span className="bag__item-counter">{wishListDataLength}</span>
+      <NotificationIcon
+        count={wishListDataLength}
+        showNotification={wishListDataLength > 0}
+      />
     </Fragment>
   );
 };
