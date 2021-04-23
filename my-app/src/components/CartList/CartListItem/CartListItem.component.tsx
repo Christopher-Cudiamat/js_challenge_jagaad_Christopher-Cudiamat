@@ -33,7 +33,7 @@ const CartListItem: React.FC<ICartListItemProps> = ({
         <div>
           <AddQuantityButton product={product} />
           <p>{`${quantity}`}</p>
-          <RemoveQuantityButton product={product} />
+          <RemoveQuantityButton product={product} quantity={quantity} />
         </div>
       </div>
     </li>

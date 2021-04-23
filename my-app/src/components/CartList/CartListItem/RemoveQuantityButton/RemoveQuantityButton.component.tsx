@@ -6,11 +6,13 @@ import "./removeQuantityButton.style.scss";
 
 const RemoveQuantityButton: React.FC<IRemoveQuantityButtonProps> = ({
   product,
+  quantity,
 }) => {
   const dispatch = useDispatch();
 
   return (
     <button
+      disabled={quantity <= 1}
       className="remove__button"
       onClick={() => dispatch(removeProduct(product))}
     >

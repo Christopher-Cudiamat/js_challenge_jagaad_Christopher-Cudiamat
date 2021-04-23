@@ -10,3 +10,8 @@
   display: flex;
   justify-content: center;
 }
+
+.remove__button:disabled,
+.remove__button[disabled] {
+  opacity: 0.3;
+}
