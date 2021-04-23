@@ -38,12 +38,21 @@
 }
 
 .cart__container {
-  width: 80vw;
+  width: 100vw;
   height: 55vh;
   overflow-y: scroll;
   background: $whiteColor;
 
   @include customMinBreakPoint(600) {
     width: 80vw;
+  }
+
+  @include customMinBreakPoint(800) {
+    width: 60vw;
+  }
+
+  @include customMinBreakPoint(1200) {
+    width: 40vw;
+    max-width: 50rem;
   }
 }

@@ -19,8 +19,8 @@ const WishList: React.FC = () => {
     <div
       className={
         filteredProducts.length > 0
-          ? "cart__container"
-          : "cart__container cart__no-result"
+          ? "wishlist__container"
+          : "wishlist__container cart__no-result"
       }
     >
       {filteredProducts.length > 0 ? (
