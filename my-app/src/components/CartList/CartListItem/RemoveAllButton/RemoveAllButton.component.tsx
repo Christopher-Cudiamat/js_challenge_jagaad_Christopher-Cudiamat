@@ -5,12 +5,15 @@ import { removeProducts } from "../../../../store/bag/bag.action";
 import "./removeAllButton.style.scss";
 import { IRemoveAllButtonProps } from "./removeAllButton.type";
 
-const RemoveAllButton: React.FC<IRemoveAllButtonProps> = ({ product }) => {
+const RemoveAllButton: React.FC<IRemoveAllButtonProps> = ({
+  product,
+  quantity,
+}) => {
   const dispatch = useDispatch();
   return (
     <button
       className="remove-icon"
-      onClick={() => dispatch(removeProducts(product))}
+      onClick={() => dispatch(removeProducts(product, quantity))}
     >
       {textConfig.REMOVE_ITEM}
     </button>

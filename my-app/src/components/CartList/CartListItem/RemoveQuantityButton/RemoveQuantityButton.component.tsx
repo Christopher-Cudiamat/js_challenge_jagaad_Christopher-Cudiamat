@@ -14,7 +14,7 @@ const RemoveQuantityButton: React.FC<IRemoveQuantityButtonProps> = ({
     <button
       disabled={quantity <= 1}
       className="remove__button"
-      onClick={() => dispatch(removeProduct(product))}
+      onClick={() => dispatch(removeProduct(product, 1))}
     >
       -
     </button>

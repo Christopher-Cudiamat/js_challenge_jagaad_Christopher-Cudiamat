@@ -5,16 +5,19 @@ export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
 export interface IAddProductAction {
   type: string;
   payload: any;
+  quantity: number;
 }
 
 export interface IRemoveProductsAction {
   type: string;
   payload: any;
+  quantity: number;
 }
 
 export interface IRemoveProductAction {
   type: string;
   payload: string;
+  quantity: number;
 }
 
 export interface IBagState {
@@ -24,5 +27,5 @@ export interface IBagState {
 
 export type BagReducerAction =
   | IAddProductAction
-  | IRemoveProductsAction
-  | IRemoveProductAction;
+  | IRemoveProductAction
+  | IRemoveProductsAction;

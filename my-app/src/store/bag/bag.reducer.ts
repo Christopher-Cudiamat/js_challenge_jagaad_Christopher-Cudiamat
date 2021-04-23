@@ -18,6 +18,7 @@ export const bagReducer = (
 ): IBagState => {
   switch (action.type) {
     case ADD_PRODUCT: {
+      //Add a quantity of an item in the cart list
       const newPrice = getDiscountedPrice(
         action.payload.discount,
         action.payload.retail_price.value,
@@ -30,6 +31,8 @@ export const bagReducer = (
         products: [...state.products, action.payload],
       };
     }
+
+    // Remove all quantity of an item in the cart list
     case REMOVE_PRODUCTS: {
       const newProductsList = state.products.filter(
         (el: any) => el.uuid !== action.payload.uuid
@@ -42,14 +45,16 @@ export const bagReducer = (
 
       return {
         ...state,
-        totalPrice: state.totalPrice - newPrice,
+        totalPrice: state.totalPrice - newPrice * action.quantity,
         products: newProductsList,
       };
     }
+
+    // Remove one quantity of an item in the cart list
     case REMOVE_PRODUCT: {
       const a = state.products
         .filter((el: any) => el.uuid === action.payload.uuid)
-        .splice(1);
+        .splice(action.quantity);
 
       const b = state.products.filter(
         (el: any) => el.uuid !== action.payload.uuid
