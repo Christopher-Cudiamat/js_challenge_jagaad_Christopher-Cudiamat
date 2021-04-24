@@ -23,7 +23,7 @@ const CartList: React.FC = () => {
       }
     >
       {cartProducts.length > 0 ? (
-        <Fragment>
+        <div data-testId="cart-list-modal">
           <ul>
             {cartProducts.map((el: IProductData) => (
               <CartListItem
@@ -37,12 +37,12 @@ const CartList: React.FC = () => {
             <h4>{textConfig.CART_SUB_TOTAL}</h4>
             <TotalPrice />
           </div>
-        </Fragment>
+        </div>
       ) : (
-        <Fragment>
+        <div data-testId="no-result">
           <h3>No product found</h3>
           <ExploreToursButton />
-        </Fragment>
+        </div>
       )}
     </div>
   );

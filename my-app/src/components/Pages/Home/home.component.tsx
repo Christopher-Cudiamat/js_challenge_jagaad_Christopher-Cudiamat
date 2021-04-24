@@ -21,7 +21,6 @@ const Home: React.FC = () => {
   const [products, setProducts] = useState<IProductData[] | []>([]);
 
   const [offset, setOffset] = useState(0);
-  //the Api does not return total count of products
   const totalProductsLegth = 71;
   const itemPerPage = 6;
   const modals = useSelector((state: AppState) => state.modals);

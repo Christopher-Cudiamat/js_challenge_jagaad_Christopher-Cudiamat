@@ -9,7 +9,7 @@ const Loader: React.FC<ILoaderProps> = ({ isLoading }) => {
       {isLoading && (
         <div className="loader-container">
           <Backdrop variant={"light"} />
-          <div className="loader" />
+          <div className="loader" data-testId="loader" />
         </div>
       )}
     </Fragment>
