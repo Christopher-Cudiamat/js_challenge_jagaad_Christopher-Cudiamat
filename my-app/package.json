@@ -24,14 +24,10 @@
     "dev": "--host 0.0.0.0 react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "cypress open",
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.ts src/**/*.tsx",
     "pretty": "prettier --write \"./**/*.{ts,tsx,json}\"",
-    "cypress:start:app": "cross-env BROWSER=none react-scripts -r @cypress/instrument-cra start",
-    "cypress:start:wait": "start-server-and-test cypress:start:app http://localhost:3000",
-    "cypress:open": "npm run cypress:start:wait -- \"cypress open\"",
-    "cypress:run": "npm run cypress:start:wait -- \"cypress run\""
+    "test:cypress": "cypress open"  
   },
   "eslintConfig": {
     "extends": [
@@ -52,14 +48,10 @@
     ]
   },
   "devDependencies": {
-    "@cypress/code-coverage": "^3.9.4",
-    "@cypress/instrument-cra": "^1.4.0",
-    "@testing-library/cypress": "^7.0.6",
     "@types/lodash": "^4.14.168",
     "@types/testing-library__cypress": "^5.0.8",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
-    "cross-env": "^7.0.3",
     "cypress": "^7.1.0",
     "eslint": "^7.24.0",
     "eslint-config-prettier": "^8.2.0",
@@ -70,7 +62,6 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-react": "^7.23.2",
-    "prettier": "^2.2.1",
-    "start-server-and-test": "^1.12.1"
+    "prettier": "^2.2.1"
   }
 }
