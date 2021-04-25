@@ -19,9 +19,10 @@ const WishlistButton: React.FC<IWishlistButtonProps> = ({ data }) => {
 
   return (
     <button
-      onClick={() => dispatch(addToWishlist(data))}
+      data-testId="add-wishlist-button"
       disabled={alreadyInBag || alreadyInWishlist}
       className="product__wishlist-button button--wishlist"
+      onClick={() => dispatch(addToWishlist(data))}
     >
       <img
         src={StarIcon}

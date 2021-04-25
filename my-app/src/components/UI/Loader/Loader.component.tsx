@@ -5,14 +5,14 @@ import "./loader.style.scss";
 
 const Loader: React.FC<ILoaderProps> = ({ isLoading }) => {
   return (
-    <Fragment>
+    <div>
       {isLoading && (
-        <div className="loader-container">
+        <div className="loader-container" data-testId="loader">
           <Backdrop variant={"light"} />
-          <div className="loader" data-testId="loader" />
+          <div className="loader" />
         </div>
       )}
-    </Fragment>
+    </div>
   );
 };
 

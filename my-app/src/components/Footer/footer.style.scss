@@ -3,9 +3,12 @@
 .footer {
   @include container;
   @include bar;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-sidenote {
   font-family: "Lato-Bold", sans-serif;
+  font-size: 1.2rem;
   letter-spacing: 0.137rem;
 }

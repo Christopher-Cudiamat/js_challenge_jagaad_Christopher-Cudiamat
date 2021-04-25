@@ -24,7 +24,7 @@ const CartList: React.FC = () => {
     >
       {cartProducts.length > 0 ? (
         <div data-testId="cart-list-modal">
-          <ul>
+          <ul data-testId="cart-list-items-container">
             {cartProducts.map((el: IProductData) => (
               <CartListItem
                 key={el.uuid}

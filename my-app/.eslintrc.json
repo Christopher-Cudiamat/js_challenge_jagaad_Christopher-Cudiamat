@@ -6,9 +6,11 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "react-app/jest",
     "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "plugin:cypress/recommended",
+    "prettier",
+    "react-app"
+    
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {

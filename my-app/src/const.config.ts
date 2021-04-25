@@ -7,4 +7,5 @@ export const textConfig = {
   CART_SUB_TOTAL: "CART SUB TOTAL",
   REMOVE_ITEM: "Remove",
   EXPLORE_TOURS: "Explore tours",
+  FOOTER_TEXT: "Copyright © 2021 Tour ITA Inc. All rights reserved",
 };

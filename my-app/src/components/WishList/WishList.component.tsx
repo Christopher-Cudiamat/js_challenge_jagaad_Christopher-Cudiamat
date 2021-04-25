@@ -20,7 +20,7 @@ const WishList: React.FC = () => {
       }
     >
       {wishlistproducts.length > 0 ? (
-        <ul className="whishlist-item__container">
+        <ul className="whishlist-item__container" data-testId="wish-list-modal">
           {wishlistproducts.map((el: IProductData) => (
             <WishListItem key={el.uuid} product={el} />
           ))}

@@ -17,7 +17,7 @@ const CartListItem: React.FC<ICartListItemProps> = ({
   const maxString = 40;
 
   return (
-    <li className="cartItem__container">
+    <li className="cartItem__container" data-testId="cart-list-items">
       <div className="cartItem__image-container">
         <div
           style={{ backgroundImage: `url(${cover_image_url})` }}

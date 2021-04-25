@@ -15,6 +15,7 @@ const persistedState = loadState();
 
 const store = createStore(rootReducer, persistedState, composeEnhancers());
 
+//Saving some redux state to the local storage to make them persist
 store.subscribe(
   throttle(() => {
     saveState({

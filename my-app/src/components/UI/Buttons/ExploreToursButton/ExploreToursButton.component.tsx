@@ -9,6 +9,7 @@ const ExploreToursButton: React.FC = () => {
   const dispatch = useDispatch();
   return (
     <button
+      data-testId="explore-button"
       onClick={() => dispatch(closeModals())}
       className="exploreTours__button"
     >

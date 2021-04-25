@@ -8,7 +8,11 @@ const NotificationIcon: React.FC<INotificationIconProps> = ({
 }) => {
   return (
     <Fragment>
-      {showNotification && <span className="bag__item-counter">{count}</span>}
+      {showNotification && (
+        <span className="bag__item-counter" data-testId="notification-icon">
+          {count}
+        </span>
+      )}
     </Fragment>
   );
 };
