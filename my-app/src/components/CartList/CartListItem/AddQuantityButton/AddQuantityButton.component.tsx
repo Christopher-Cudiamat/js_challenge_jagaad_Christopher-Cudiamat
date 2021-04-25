@@ -9,6 +9,7 @@ const AddQuantityButton: React.FC<IAddQuantityButtonProps> = ({ product }) => {
 
   return (
     <button
+      data-testId="add-quantity-button"
       className="add__button"
       onClick={() => dispatch(addProducts(product))}
     >

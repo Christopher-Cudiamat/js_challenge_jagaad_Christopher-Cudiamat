@@ -5,6 +5,7 @@ import "./backdrop.style.scss";
 const Backdrop: React.FC<IBackdropProps> = ({ onClick, variant }) => {
   return (
     <div
+      data-testId="backdrop"
       onClick={onClick}
       className={
         variant === "light"

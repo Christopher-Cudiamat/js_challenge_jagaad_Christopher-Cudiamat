@@ -10,7 +10,7 @@ import RemoveWishtlistButton from "./RemoveWishListButton.component.tsx/RemoveWi
 
 const WishListItem: React.FC<IWishListItemProps> = ({ product }) => {
   return (
-    <Card key={product.uuid}>
+    <Card key={product.uuid} data-testId="wishlist-item">
       <RemoveWishtlistButton product={product} />
       <CardMedia image={product.cover_image_url} />
       <CardDetails>
@@ -20,7 +20,9 @@ const WishListItem: React.FC<IWishListItemProps> = ({ product }) => {
           retailPrice={product.retail_price.formatted_value}
           netPrice={product.original_retail_price.formatted_value}
         />
-        <AddToCartButton data={product} />
+        <div data-testId="add-to-cart-button-container">
+          <AddToCartButton data={product} />
+        </div>
       </CardDetails>
     </Card>
   );

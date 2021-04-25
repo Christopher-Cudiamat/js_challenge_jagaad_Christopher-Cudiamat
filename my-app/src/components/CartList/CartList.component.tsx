@@ -39,7 +39,7 @@ const CartList: React.FC = () => {
           </div>
         </div>
       ) : (
-        <div data-testId="no-result">
+        <div data-testId="no-result-cart-list">
           <h3>No product found</h3>
           <ExploreToursButton />
         </div>

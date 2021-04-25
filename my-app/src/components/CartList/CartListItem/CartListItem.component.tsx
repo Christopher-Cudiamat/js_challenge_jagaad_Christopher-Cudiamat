@@ -34,7 +34,7 @@ const CartListItem: React.FC<ICartListItemProps> = ({
         <RemoveAllButton product={product} quantity={quantity} />
         <div>
           <RemoveQuantityButton product={product} quantity={quantity} />
-          <p>{`${quantity}`}</p>
+          <p data-testId="quantity-item">{`${quantity}`}</p>
           <AddQuantityButton product={product} />
         </div>
       </div>

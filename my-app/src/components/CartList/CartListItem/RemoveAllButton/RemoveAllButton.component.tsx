@@ -12,6 +12,7 @@ const RemoveAllButton: React.FC<IRemoveAllButtonProps> = ({
   const dispatch = useDispatch();
   return (
     <button
+      data-testId="remove-all-button"
       className="remove-icon"
       onClick={() => dispatch(removeProducts(product, quantity))}
     >
