@@ -34,7 +34,7 @@ const Home: React.FC = () => {
   return (
     <Fragment>
       <div className="container">
-        <ul className="product-list" data-testId="product-list">
+        <ul className="product-list" data-testid="product-list">
           {products?.map((el: IProductData) => (
             <Card key={el.uuid}>
               <CardMedia image={el.cover_image_url}>

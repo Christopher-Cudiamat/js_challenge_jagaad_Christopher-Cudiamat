@@ -22,7 +22,7 @@ const WishList: React.FC = () => {
       {wishlistproducts.length > 0 ? (
         <ul
           className="whishlist-item__container"
-          data-testId="wishlist-item-container"
+          data-testid="wishlist-item-container"
         >
           {wishlistproducts.map((el: IProductData) => (
             <WishListItem key={el.uuid} product={el} />
@@ -30,7 +30,7 @@ const WishList: React.FC = () => {
         </ul>
       ) : (
         <Fragment>
-          <h3 data-testId="no-result-wishlist">No product found</h3>
+          <h3 data-testid="no-result-wishlist">No product found</h3>
           <ExploreToursButton />
         </Fragment>
       )}

@@ -10,7 +10,7 @@ const RemoveWishtlistButton: React.FC<IRemoveWishtlistButtonProps> = ({
   const dispatch = useDispatch();
   return (
     <button
-      data-testId="wishlist-remove-button"
+      data-testid="wishlist-remove-button"
       className="remove-wishlist__button"
       onClick={() => dispatch(removeSingleWishlist(product))}
     >

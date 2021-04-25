@@ -4,7 +4,7 @@ import "./brandLogo.style.scss";
 
 const BrandLogo: React.FC = () => {
   return (
-    <h1 className="page-title" data-testId="logo-text">
+    <h1 className="page-title" data-testid="logo-text">
       {textConfig.BRAND}
     </h1>
   );

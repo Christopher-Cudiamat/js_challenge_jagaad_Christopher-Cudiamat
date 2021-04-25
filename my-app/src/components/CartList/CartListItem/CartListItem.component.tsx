@@ -17,7 +17,7 @@ const CartListItem: React.FC<ICartListItemProps> = ({
   const maxString = 40;
 
   return (
-    <li className="cartItem__container" data-testId="cart-list-items">
+    <li className="cartItem__container" data-testid="cart-list-items">
       <div className="cartItem__image-container">
         <div
           style={{ backgroundImage: `url(${cover_image_url})` }}
@@ -34,7 +34,7 @@ const CartListItem: React.FC<ICartListItemProps> = ({
         <RemoveAllButton product={product} quantity={quantity} />
         <div>
           <RemoveQuantityButton product={product} quantity={quantity} />
-          <p data-testId="quantity-item">{`${quantity}`}</p>
+          <p data-testid="quantity-item">{`${quantity}`}</p>
           <AddQuantityButton product={product} />
         </div>
       </div>

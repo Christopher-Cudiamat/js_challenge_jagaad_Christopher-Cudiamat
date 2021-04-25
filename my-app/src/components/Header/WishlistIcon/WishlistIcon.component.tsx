@@ -20,7 +20,7 @@ const WhishlistIcon: React.FC = () => {
         alt="Bag"
         className="icon"
         onClick={() => dispatch(setToggle("showWishListModal"))}
-        data-testId="wishlist-button"
+        data-testid="wishlist-button"
       />
       <NotificationIcon
         count={wishListDataLength}

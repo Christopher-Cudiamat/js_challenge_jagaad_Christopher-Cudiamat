@@ -6,7 +6,7 @@ import "./totalPrice.style.scss";
 const TotalPrice: React.FC = () => {
   const totalPrice = useSelector((state: AppState) => state.bag.totalPrice);
   return (
-    <div className="header-bag__price" data-testId="total-price">
+    <div className="header-bag__price" data-testid="total-price">
       €{totalPrice.toFixed(2)}
     </div>
   );

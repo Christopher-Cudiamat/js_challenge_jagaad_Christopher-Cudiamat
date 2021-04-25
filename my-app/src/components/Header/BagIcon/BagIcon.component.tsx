@@ -18,7 +18,7 @@ const BagIcon: React.FC = () => {
         src={bagIcon}
         alt="Bag"
         className="icon"
-        data-testId="bag-button"
+        data-testid="bag-button"
         onClick={() => dispatch(setToggle("showCartListModal"))}
       />
       <NotificationIcon

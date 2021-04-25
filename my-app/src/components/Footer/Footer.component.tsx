@@ -5,7 +5,7 @@ import "./footer.style.scss";
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
-      <p className="footer-sidenote" data-testId="footer">
+      <p className="footer-sidenote" data-testid="footer">
         {textConfig.FOOTER_TEXT}
       </p>
     </footer>

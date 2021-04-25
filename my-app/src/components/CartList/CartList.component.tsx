@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import { textConfig } from "../../const.config";
 import { AppState } from "../../redux.config";
@@ -23,8 +23,8 @@ const CartList: React.FC = () => {
       }
     >
       {cartProducts.length > 0 ? (
-        <div data-testId="cart-list-modal">
-          <ul data-testId="cart-list-items-container">
+        <div data-testid="cart-list-modal">
+          <ul data-testid="cart-list-items-container">
             {cartProducts.map((el: IProductData) => (
               <CartListItem
                 key={el.uuid}
@@ -39,7 +39,7 @@ const CartList: React.FC = () => {
           </div>
         </div>
       ) : (
-        <div data-testId="no-result-cart-list">
+        <div data-testid="no-result-cart-list">
           <h3>No product found</h3>
           <ExploreToursButton />
         </div>

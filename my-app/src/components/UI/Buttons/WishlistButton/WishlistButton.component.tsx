@@ -19,7 +19,7 @@ const WishlistButton: React.FC<IWishlistButtonProps> = ({ data }) => {
 
   return (
     <button
-      data-testId="add-wishlist-button"
+      data-testid="add-wishlist-button"
       disabled={alreadyInBag || alreadyInWishlist}
       className="product__wishlist-button button--wishlist"
       onClick={() => dispatch(addToWishlist(data))}

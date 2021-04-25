@@ -13,11 +13,11 @@ const Modal: React.FC<IModalProps> = ({ showModal, children }) => {
       {showModal && (
         <Fragment>
           <Backdrop
-            data-testId="backdrop-for-modal"
+            data-testid="backdrop-for-modal"
             variant={"dark"}
             onClick={() => dispatch(closeModals())}
           />
-          <div className="modal" data-testId="modal">
+          <div className="modal" data-testid="modal">
             {children}
           </div>
         </Fragment>

@@ -16,7 +16,7 @@ const AddToCartButton: React.FC<IAddToCartButtonProps> = ({ data }) => {
 
   return (
     <button
-      data-testId="add-to-cart-button"
+      data-testid="add-to-cart-button"
       onClick={() => dispatch(addProducts(data))}
       disabled={alreadyInBag}
       className={
