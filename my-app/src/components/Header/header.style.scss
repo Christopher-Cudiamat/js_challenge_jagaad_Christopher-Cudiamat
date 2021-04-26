@@ -4,12 +4,16 @@
 .header {
   @include container;
   @include bar;
+  padding: 0 2rem;
   justify-content: space-between;
+  @include customMinBreakPoint(1240) {
+    padding: 0 4rem;
+  }
 }
 
 .header-bag {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; 
   align-items: flex-end;
 }
 
