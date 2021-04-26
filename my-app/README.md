@@ -2,7 +2,7 @@
 
 Frontend React.JS Coding Challenge: Build a simple e-commerce application.
 
-![]("../js_challenge_jagaad_Christopher-Cudiamat/my-app/src/assets/images/activity_image.jpeg");
+![Alt text]("./src/assets/images/tour-img.jpg")
 
 ## Instructions to run, build and test the app locally 
 
