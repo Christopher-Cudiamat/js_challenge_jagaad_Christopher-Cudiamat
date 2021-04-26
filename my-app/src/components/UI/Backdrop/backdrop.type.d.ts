@@ -1,4 +1,4 @@
 export interface IBackdropProps {
-  variant: "light" | "dark";
+  variant: "light" | "dark" | "opaque-light";
   onClick?: IBackdropProps.onClick;
 }

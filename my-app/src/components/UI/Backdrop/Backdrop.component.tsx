@@ -7,11 +7,7 @@ const Backdrop: React.FC<IBackdropProps> = ({ onClick, variant }) => {
     <div
       data-testid="backdrop"
       onClick={onClick}
-      className={
-        variant === "light"
-          ? "backdrop backdrop__light"
-          : "backdrop backdrop__dark"
-      }
+      className={`backdrop backdrop__${variant}`}
     />
   );
 };

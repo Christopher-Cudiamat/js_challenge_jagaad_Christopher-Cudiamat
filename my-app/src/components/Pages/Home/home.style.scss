@@ -3,7 +3,6 @@
 .container {
   @include container;
   padding: 2rem;
-  min-height: 100%;
 
   @include customMinBreakPoint(800) {
     padding: 4rem;
