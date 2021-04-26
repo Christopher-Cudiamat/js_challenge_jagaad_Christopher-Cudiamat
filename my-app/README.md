@@ -1,9 +1,3 @@
-# js_challenge_jagaad_Christopher-Cudiamat
-
-Frontend React.JS Coding Challenge: build a simple e-commerce application.
-
-test
-
 ## js_challenge_jagaad_Christopher-Cudiamat
 
 Frontend React.JS Coding Challenge: build a simple e-commerce application.
@@ -20,7 +14,7 @@ The bag in the header must be updated with the new quantities and the new total 
 7. Use of linting tools
 8. Unit testing
 
-## Available Scripts
+## Available Scripts 
 
 In the project directory, you can run:
 
@@ -58,5 +52,18 @@ the app is ready to be deployed!
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+
+## How to deploy production ready Docker container of the app
+
+1. type the "npm run build" command in the terminal to build the react project.
+
+2. type this command "docker build -f Dockerfile.prod -t sample:prod ." to build and tag the Docker image. 
+
+**Note <sample:prod> is any name you want for your Docker image and must be in lower case**
+
+3. Spin up the container with this command "run -it --rm -p 1337:80 sample:prod".
+
+4. Navigate to http://localhost:1337/ in your browser to view the app.
 
 
