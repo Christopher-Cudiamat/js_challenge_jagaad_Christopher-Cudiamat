@@ -2,13 +2,11 @@
 
 Frontend React.JS Coding Challenge: Build a simple e-commerce application.
 
-![Alt text]("./src/assets/images/tour-img.jpg")
+![Alt text]("./src/assets/images/tour-img.jpg?raw=true" "App")
 
 ## Instructions to run, build and test the app locally 
 
 In the project directory, you can run:
-
-
 
 ### npm install
 
