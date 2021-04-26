@@ -10,6 +10,7 @@ const RemoveAllButton: React.FC<IRemoveAllButtonProps> = ({
   quantity,
 }) => {
   const dispatch = useDispatch();
+
   return (
     <button
       data-testid="remove-all-button"

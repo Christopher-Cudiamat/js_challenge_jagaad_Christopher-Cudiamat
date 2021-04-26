@@ -8,6 +8,12 @@ Frontend React.JS Coding Challenge: Build a simple e-commerce application.
 
 In the project directory, you can run:
 
+
+
+### npm install
+
+To install the project dependencies.
+
 ### `npm start`
 
 Runs the app in the development mode.\

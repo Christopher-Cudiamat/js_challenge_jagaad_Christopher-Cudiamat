@@ -42,6 +42,7 @@
   height: 55vh;
   overflow-y: scroll;
   background: $whiteColor;
+  padding: 1.5rem 0rem;
 
   @include customMinBreakPoint(600) {
     width: 80vw;

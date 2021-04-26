@@ -47,11 +47,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $textColor;
-  background-color: $greyLight1Color;
+  background-color: $secondaryColor;
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
   text-rendering: optimizeLegibility;
+  
 }
 html,
 body,
@@ -152,4 +153,5 @@ button {
   outline: none;
   appearance: none;
   border: none;
+  cursor: pointer;
 }
