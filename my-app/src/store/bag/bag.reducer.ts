@@ -55,12 +55,12 @@ export const bagReducer = (
 
     // Remove one quantity of an item in the cart list
     case REMOVE_PRODUCT: {
-      const a = state.products
-        .filter((el: IProductData) => el.uuid === action.payload.uuid)
-        .splice(action.quantity);
+      const selectedIndex = state.products
+        .map((el: IProductData) => el.uuid === action.payload.uuid)
+        .lastIndexOf(true);
 
-      const b = state.products.filter(
-        (el: IProductData) => el.uuid !== action.payload.uuid
+      const newArray = state.products.filter(
+        (_, index: number) => index !== selectedIndex
       );
 
       const newPrice = getDiscountedPrice(
@@ -72,7 +72,7 @@ export const bagReducer = (
       return {
         ...state,
         totalPrice: state.totalPrice - newPrice,
-        products: [...a, ...b],
+        products: newArray,
       };
     }
     default:
